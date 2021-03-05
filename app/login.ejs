@@ -1,0 +1,57 @@
+<div id="loginContainer" style="display: none;">
+    <div id="loginCancelContainer" style="display: none;">
+        <button id="loginCancelButton">
+            <div id="loginCancelIcon">X</div>
+            <span id="loginCancelText">Cancel</span>
+        </button>
+    </div>
+    <div id="loginContent">
+        <form id="loginForm">
+            <span id="loginSubheader" style="font-family: 'Summer Blaster',serif; font-size: 34px; font-weight: normal">Connexion Minecraft</span>
+            <fieldset id="el##"
+                      style="font-family: 'Summer Blaster', serif;font-weight: normal;letter-spacing: 1px;border-color: white;padding: 0;margin-bottom: 12px">
+                <legend>Email</legend>
+                <input id="loginUsername" type="email" required
+                       style="border: none;width: 450px;height: 40px; background-color: transparent; color: white; outline: none; font-size: 13px; padding: 0 12px 12px;font-family: 'Summer Blaster',serif;letter-spacing: 1px;"/>
+            </fieldset>
+            <fieldset id="el##"
+                      style="font-family: 'Summer Blaster', serif;font-weight: normal;letter-spacing: 1px;border-color: white;padding: 0;">
+                <legend>Mot de passe</legend>
+                <input id="loginPassword" type="password" required
+                       style="border: none;width: 450px;height: 40px; background-color: transparent; color: white; outline: none; font-size: 20px; padding: 0 12px 12px;font-family: 'Summer Blaster',serif;letter-spacing: 1px;"/>
+            </fieldset>
+            <div id="loginOptions" style="display: none">
+                <label id="checkmarkContainer">
+                    <input id="loginRememberOption" type="checkbox" checked>
+                    <span id="loginRememberText" class="loginSpanDim">se souvenir?</span>
+                    <span class="loginCheckmark"></span>
+                </label>
+            </div>
+            <button id="loginButton"
+                    style="border: solid; padding-right: 30px; padding-left: 30px; margin-top: 30px;"
+                    disabled>
+
+                <div id="loginButtonContent">
+                    Connexion
+                    <svg id="loginSVG" viewBox="0 0 24.87 13.97">
+                        <defs>
+                            <style>.arrowLine {
+                                    fill: none;
+                                    stroke: #FFF;
+                                    stroke-width: 2px;
+                                    transition: 0.25s ease;
+                                }</style>
+                        </defs>
+                        <polyline class="arrowLine" points="0.71 13.26 12.56 1.41 24.16 13.02"/>
+                    </svg>
+                    <div class="circle-loader">
+                        <div class="checkmark draw"></div>
+                    </div>
+                </div>
+            </button>
+            <span id="loginEmailError"></span>
+            <span id="loginPasswordError"></span>
+        </form>
+    </div>
+    <script src="./assets/js/scripts/login.js"></script>
+</div>
