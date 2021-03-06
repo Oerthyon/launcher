@@ -20,6 +20,8 @@ jobs:
 
       - name: Build
         run: npm run dist:linux
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -43,6 +45,8 @@ jobs:
 
       - name: Build
         run: npm run dist:win
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -67,6 +71,8 @@ jobs:
 
       - name: Build
         run: npm run dist:mac
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
