@@ -23,13 +23,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          path: |
-            dist/latest-linux.yml
-            dist/oerthyon-launcher-*.*.*.AppImage
-
   build-windows:
     runs-on: windows-latest
     name: Build for Windows
@@ -48,14 +41,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          path: |
-            dist/latest.yml
-            dist/oerthyon-launcher-*.*.*.exe
-            dist/oerthyon-launcher-*.*.*.exe.blockmap
-
   build-mac:
     runs-on: macos-latest
     name: Build for MacOS
@@ -73,11 +58,3 @@ jobs:
         run: npm run dist:mac
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          path: |
-            dist/latest-mac.yml
-            dist/oerthyon-launcher-*.*.*.dmg
-            dist/oerthyon-launcher-*.*.*.dmg.blockmap
