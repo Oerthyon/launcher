@@ -21,7 +21,7 @@ builder.build({
         appId: 'oerthyonlauncher',
         productName: 'Oerthyon Launcher',
         artifactName: '${productName}-setup-${version}.${ext}',
-        copyright: 'Copyright © 2018-2021 Superkooka',
+        copyright: 'Copyright © 2016-2021 Oerthyon',
         directories: {
             buildResources: 'build',
             output: 'dist'
