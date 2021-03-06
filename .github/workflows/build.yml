@@ -22,7 +22,7 @@ jobs:
         run: npm run dist:linux
 
       - name: Upload artifact
-        uses: actions/upload-artifacts@v2
+        uses: actions/upload-artifact@v2
         with:
           path: |
             dist/latest-linux.yml
@@ -45,7 +45,7 @@ jobs:
         run: npm run dist:win
 
       - name: Upload artifact
-        uses: actions/upload-artifacts@v2
+        uses: actions/upload-artifact@v2
         with:
           path: |
             dist/latest.yml
@@ -69,7 +69,7 @@ jobs:
         run: npm run dist:mac
 
       - name: Upload artifact
-        uses: actions/upload-artifacts@v2
+        uses: actions/upload-artifact@v2
         with:
           path: |
             dist/latest-mac.yml
