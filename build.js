@@ -20,7 +20,7 @@ builder.build({
     config: {
         appId: 'oerthyonlauncher',
         productName: 'Oerthyon Launcher',
-        artifactName: '${productName}-setup-${version}.${ext}',
+        artifactName: 'oerthyon-launcher-${version}.${ext}',
         copyright: 'Copyright © 2016-2021 Oerthyon',
         directories: {
             buildResources: 'build',

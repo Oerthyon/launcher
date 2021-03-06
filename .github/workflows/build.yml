@@ -1,0 +1,74 @@
+name: Build
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    name: Build for Linux
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+
+      - name: Install assets
+        run: npm install
+
+      - name: Build
+        run: npm run dist:linux
+
+      - name: Upload artifact
+        uses: actions/upload-artifacts@v2
+        with:
+          - path: dist/latest-linux.yml
+          - path: dist/oerthyon-launcher-*.*.*.AppImage
+
+  build-windows:
+    runs-on: windows-latest
+    name: Build for Windows
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+
+      - name: Install assets
+        run: npm install
+
+      - name: Build
+        run: npm run dist:win
+
+      - name: Upload artifact
+        uses: actions/upload-artifacts@v2
+        with:
+          - path: dist/latest.yml
+          - path: dist/oerthyon-launcher-*.*.*.exe
+          - path: dist/oerthyon-launcher-*.*.*.exe.blockmap
+
+  build-mac:
+    runs-on: macos-latest
+    name: Build for MacOS
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+
+      - name: Install assets
+        run: npm install
+
+      - name: Build
+        run: npm run dist:mac
+
+      - name: Upload artifact
+        uses: actions/upload-artifacts@v2
+        with:
+          - path: dist/latest-mac.yml
+          - path: dist/oerthyon-launcher-*.*.*.dmg
+          - path: dist/oerthyon-launcher-*.*.*.dmg.blockmap
