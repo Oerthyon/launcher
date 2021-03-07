@@ -223,7 +223,7 @@ function saveSettingsValues(){
     })
 }
 
-let selectedSettingsTab = 'settingsTabAccount'
+let selectedSettingsTab = 'settingsTabMinecraft'
 
 /**
  * Modify the settings container UI when the scroll threshold reaches
