@@ -1,8 +1,9 @@
-Index: app/assets/js/scripts/settings.js
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Superkooka <aymeric.gueracague@gmail.com>
+Date: Sat, 27 Mar 2021 15:12:16
+Subject: [PATCH] Remove devtools
+
+
 diff --git a/app/assets/js/scripts/settings.js b/app/assets/js/scripts/settings.js
 --- a/app/assets/js/scripts/settings.js	(revision b8245c61bb8656ea40f3a465fbf2ce924e05cad6)
 +++ b/app/assets/js/scripts/settings.js	(date 1616853059429)
@@ -19,11 +20,7 @@ diff --git a/app/assets/js/scripts/settings.js b/app/assets/js/scripts/settings.
  /**
   * Return whether or not the provided version is a prerelease.
   * 
-Index: app/assets/js/scripts/uicore.js
-IDEA additional info:
-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
-<+>UTF-8
-===================================================================
+
 diff --git a/app/assets/js/scripts/uicore.js b/app/assets/js/scripts/uicore.js
 --- a/app/assets/js/scripts/uicore.js	(revision b8245c61bb8656ea40f3a465fbf2ce924e05cad6)
 +++ b/app/assets/js/scripts/uicore.js	(date 1616853059389)
