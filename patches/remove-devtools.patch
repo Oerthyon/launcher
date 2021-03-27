@@ -1,0 +1,60 @@
+Index: app/assets/js/scripts/settings.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/assets/js/scripts/settings.js b/app/assets/js/scripts/settings.js
+--- a/app/assets/js/scripts/settings.js	(revision b8245c61bb8656ea40f3a465fbf2ce924e05cad6)
++++ b/app/assets/js/scripts/settings.js	(date 1616853059429)
+@@ -1180,12 +1180,6 @@
+ const settingsAboutChangelogText   = settingsTabAbout.getElementsByClassName('settingsChangelogText')[0]
+ const settingsAboutChangelogButton = settingsTabAbout.getElementsByClassName('settingsChangelogButton')[0]
+ 
+-// Bind the devtools toggle button.
+-document.getElementById('settingsAboutDevToolsButton').onclick = (e) => {
+-    let window = remote.getCurrentWindow()
+-    window.toggleDevTools()
+-}
+-
+ /**
+  * Return whether or not the provided version is a prerelease.
+  * 
+Index: app/assets/js/scripts/uicore.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/assets/js/scripts/uicore.js b/app/assets/js/scripts/uicore.js
+--- a/app/assets/js/scripts/uicore.js	(revision b8245c61bb8656ea40f3a465fbf2ce924e05cad6)
++++ b/app/assets/js/scripts/uicore.js	(date 1616853059389)
+@@ -24,13 +24,6 @@
+     throw new Error('Sorry, this app does not support window.eval().')
+ }
+ 
+-// Display warning when devtools window is opened.
+-remote.getCurrentWebContents().on('devtools-opened', () => {
+-    console.log('%cThe console is dark and full of terrors.', 'color: white; -webkit-text-stroke: 4px #a02d2a; font-size: 60px; font-weight: bold')
+-    console.log('%cIf you\'ve been told to paste something here, you\'re being scammed.', 'font-size: 16px')
+-    console.log('%cUnless you know exactly what you\'re doing, close this window.', 'font-size: 16px')
+-})
+-
+ // Disable zoom, needed for darwin.
+ webFrame.setZoomLevel(0)
+ webFrame.setVisualZoomLevelLimits(1, 1)
+@@ -199,15 +192,3 @@
+     event.preventDefault()
+     shell.openExternal(this.href)
+ })
+-
+-/**
+- * Opens DevTools window if you hold (ctrl + shift + i).
+- * This will crash the program if you are using multiple
+- * DevTools, for example the chrome debugger in VS Code. 
+- */
+-document.addEventListener('keydown', function (e) {
+-    if((e.key === 'I' || e.key === 'i') && e.ctrlKey && e.shiftKey){
+-        let window = remote.getCurrentWindow()
+-        window.toggleDevTools()
+-    }
+-})
+\ No newline at end of file
